@@ -2,7 +2,7 @@ from socket import *
 from threading import Thread
 
 s = None
-ip = " "
+ip = ""
 port = 0
 
 def send():
@@ -24,9 +24,9 @@ def main():
     
     s = socket(AF_INET,SOCK_DGRAM)
     
-    s.bind(("",7653))
-    t = Thread(target= send)
-    t1 = Thread(target= recv)
+    s.bind(("",1324))
+    t = Thread(target = send)
+    t1 = Thread(target = recv)
 
     t.start()
     t1.start()
